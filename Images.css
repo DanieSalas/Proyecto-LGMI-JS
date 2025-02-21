@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: calibri;
+}
+
+
+header {
+    background-color: rgb(43, 43, 43);
+    width: 100%;
+    clear: both;
+    content: "";
+    display: table;
+    height: 40px;
+}
+
+.menu{
+    width: 900px;
+    margin: 0 auto;
+}
+
+
+
+nav {
+    float: right;
+    padding-top: 10px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li{
+    margin:  0 15px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+

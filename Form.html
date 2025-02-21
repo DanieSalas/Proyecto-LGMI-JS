@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
+    <head class="header">
 
-
-
-
-
-
-
-
-
+        <title>Menú Personalización</title>
+        <link rel="stylesheet" href="Form.css">
+        
+    </head>
+        
 
 <header>
-
+<nav>
     <div class="menu">
         <ul>
-            <li><a href="Personalizer.html">Personalizer.</a></li>
-            <li><a href="Form.html">Form.</a></li>
-            <li><a href="Images.html">Images.</a></li>
+            <li><a href="Personalizer.html">Personalizer</a></li>
+            <li><a href="Form.html">Form</a></li>
+            <li><a href="Images.html">Images</a></li>
+            <li><button id="Mode">Mode</button></li>
         </ul>
     </div>
-    
+    <script src="Cosas.js"></script>
+    <script>
+        document.getElementById("Mode").addEventListener("click", function() {
+            document.body.style.backgroundColor = "black";
+        });
+    </script>
+</nav>    
     </header>
 
 
