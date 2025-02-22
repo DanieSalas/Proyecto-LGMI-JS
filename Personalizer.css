@@ -31,20 +31,35 @@ nav {
     padding-top: 10px;
 }
 
-nav ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+nav ul {
     display: flex;
+    align-items: center; /* Alinea verticalmente */
 }
 
-nav li{
-    margin:  0 15px;
+nav li {
+    list-style: none;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
 }
 
 nav a{
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
+}
+
+.modificarCosas {
+    background: none !important; /* Elimina cualquier fondo forzado */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white; /* Asegura que el color del texto sea el mismo */
+    font-weight: bold;
+    font-size: inherit; /* Asegura que el tamaño de letra sea el mismo */
+    text-decoration: none; /* Quita el subrayado */
+    padding: 0;
+    margin: 0;
+    display: inline; /* Evita que el botón se comporte como bloque */
 }
 

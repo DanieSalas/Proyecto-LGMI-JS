@@ -4,6 +4,7 @@
 
 <title>Menú Personalización</title>
 <link rel="stylesheet" href="Personalizer.css">
+<link rel="stylesheet" href="modificarCosas.css"> <!-- Nuevo archivo CSS -->
 
 </head>
 
@@ -11,7 +12,7 @@
 <nav>
     <div class="menu">
         <ul>
-            <li><a href="Personalizer.html">Personalizer</a></li>
+            <li><a><button class="modificarCosas" onclick="toggleMenu()">Personalizer</button></a></li>
             <li><a href="Form.html">Form</a></li>
             <li><a href="Images.html">Images</a></li>
         </ul>
@@ -21,19 +22,60 @@
 
 <body>
 
+<br>    
+<h1>Welcome to Personalizer</h1>
+<br>    
+<p>This is a paragraph that you can adapt its content.</p>
+<br>    
+<p>Click to Personalizer banner.</p>
 
-<br>    <h1>Welcome to Personalizer</h1>
-<br>    <p>This is a paragraph that you can adapt its content.</p>
-<br>    <p>Click to Personalizerr banner.</p>
+
+
+
+
+<div class="menu-personalizer" id="menu">
+    
+    <div class="option-group">
+        <label>Background Color</label>
+        <div class="option" style="background: lightcoral;" onclick="cambiarBG('lightcoral')"></div>
+        <div class="option" style="background: lightgreen;" onclick="cambiarBG('lightgreen')"></div>
+        <div class="option" style="background: lightblue;" onclick="cambiarBG('lightblue')"></div>
+        <div class="option" style="background: lightgray;" onclick="cambiarBG('lightgray')"></div>
+        <div class="option" style="background: white;" onclick="cambiarBG('white')"></div>
+    </div>
+
+    
+    <div class="option-group">
+        <label>Text Color</label>
+        <div class="option" style="background: red;" onclick="cambiarColorTexto('red')"></div>
+        <div class="option" style="background: green;" onclick="cambiarColorTexto('green')"></div>
+        <div class="option" style="background: blue;" onclick="cambiarColorTexto('blue')"></div>
+        <div class="option" style="background: black;" onclick="cambiarColorTexto('black')"></div>
+        <div class="option" style="background: purple;" onclick="cambiarColorTexto('purple')"></div>
+    </div>
+
+  
+    <div class="option-group">
+        <label>Text Size</label>
+        <div class="text-option" onclick="cambiarTamaño('12px')">XS</div>
+        <div class="text-option" onclick="cambiarTamaño('16px')">S</div>
+        <div class="text-option" onclick="cambiarTamaño('20px')">M</div>
+        <div class="text-option" onclick="cambiarTamaño('24px')">L</div>
+        <div class="text-option" onclick="cambiarTamaño('30px')">XL</div>
+    </div>
+
+
+    <div class="option-group">
+        <label>Font Style</label>
+        <div class="text-option" onclick="cambiarTipoTexto('Arial')">Arial</div>
+        <div class="text-option" onclick="cambiarTipoTexto('Times New Roman')">Times</div>
+        <div class="text-option" onclick="cambiarTipoTexto('Courier New')">Courier</div>
+        <div class="text-option" onclick="cambiarTipoTexto('Verdana')">Verdana</div>
+        <div class="text-option" onclick="cambiarTipoTexto('Fantasy')">Fantasy</div>
+    </div>
+</div>
+
+<script src="modificarCosas.js"></script> 
+
 </body>
-
-
-
-
-
-
-
-
-
-
 </html>

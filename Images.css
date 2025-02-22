@@ -48,3 +48,10 @@ nav a{
     font-weight: bold;
 }
 
+button {
+    border: none; 
+    outline: none; 
+    background: none; 
+    color: #ffffff;
+  }
+  
