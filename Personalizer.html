@@ -27,7 +27,7 @@
 <br>    
 <p>Click to Personalizer banner.</p>
 
-<!-- El div de la personalización, que aparecerá justo debajo del botón Personalizer -->
+
 <div class="modificarCosas" id="menu" style="display: none; border: 2px solid #ccc; padding: 10px; margin-top: 10px; position: absolute; background-color: #f5f5f5; color: black;">
 
     <div class="option-group">
@@ -50,7 +50,7 @@
 
     <div class="option-group">
         <label>Text Size</label>
-        <!-- Aquí he hecho más visibles las opciones de tamaño con texto que describe el tamaño -->
+       
         <div class="text-option" onclick="cambiarTamaño('12px')">XS (12px)</div>
         <div class="text-option" onclick="cambiarTamaño('16px')">S (16px)</div>
         <div class="text-option" onclick="cambiarTamaño('20px')">M (20px)</div>
@@ -71,24 +71,23 @@
 <script src="modificarCosas.js"></script> 
 
 <script>
-// Función para alternar la visibilidad del menú
+
 function toggleMenu() {
     let menu = document.getElementById("menu");
     let button = document.querySelector(".modificarCosas");
 
-    // Verifica el estado actual del menú y alterna entre mostrar u ocultar
+   
     if (menu.style.display === "none" || menu.style.display === "") {
-        // Muestra el menú y ajusta su posición debajo del botón
+       
         let rect = button.getBoundingClientRect();
-        menu.style.top = (rect.bottom + window.scrollY) + "px";  // Ajusta el menú justo debajo del botón
-        menu.style.left = rect.left + "px";  // Alinea el menú con el botón
-        menu.style.display = "block";  // Muestra el menú
-    } else {
-        menu.style.display = "none";   // Oculta el menú
+        menu.style.top = (rect.bottom + window.scrollY) + "px";
+        menu.style.left = rect.left + "px"; 
+        menu.style.display = "block"; 
+        menu.style.display = "none";  
     }
 }
 
-// Las funciones que cambian los estilos en el documento
+
 function cambiarBG(color) {
     document.body.style.backgroundColor = color;
 }
