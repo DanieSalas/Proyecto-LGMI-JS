@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head class="header">
-
-<title>Menú Personalización</title>
-<link rel="stylesheet" href="Personalizer.css">
-<link rel="stylesheet" href="modificarCosas.css">
-
+    <title>Menú Personalización</title>
+    <link rel="stylesheet" href="Personalizer.css">
+    <link rel="stylesheet" href="modificarCosas.css"> 
 </head>
 
 <header>
@@ -14,7 +12,7 @@
         <ul>
             <li><a><button class="modificarCosas" onclick="toggleMenu()">Personalizer</button></a></li>
             <li><a href="Form.html">Form</a></li>
-            <li><a href="Images.html">Images</a></li>
+            <li><a href="Images.html">Images</a></li>                                                   
         </ul>
     </div>
 </nav>
@@ -29,12 +27,9 @@
 <br>    
 <p>Click to Personalizer banner.</p>
 
+<!-- El div de la personalización, que aparecerá justo debajo del botón Personalizer -->
+<div class="modificarCosas" id="menu" style="display: none; border: 2px solid #ccc; padding: 10px; margin-top: 10px; position: absolute; background-color: #f5f5f5; color: black;">
 
-
-
-
-<div class="menu-personalizer" id="menu">
-    
     <div class="option-group">
         <label>Background Color</label>
         <div class="option" style="background: lightcoral;" onclick="cambiarBG('lightcoral')"></div>
@@ -44,7 +39,6 @@
         <div class="option" style="background: white;" onclick="cambiarBG('white')"></div>
     </div>
 
-    
     <div class="option-group">
         <label>Text Color</label>
         <div class="option" style="background: red;" onclick="cambiarColorTexto('red')"></div>
@@ -54,16 +48,15 @@
         <div class="option" style="background: purple;" onclick="cambiarColorTexto('purple')"></div>
     </div>
 
-  
     <div class="option-group">
         <label>Text Size</label>
-        <div class="text-option" onclick="cambiarTamaño('12px')">XS</div>
-        <div class="text-option" onclick="cambiarTamaño('16px')">S</div>
-        <div class="text-option" onclick="cambiarTamaño('20px')">M</div>
-        <div class="text-option" onclick="cambiarTamaño('24px')">L</div>
-        <div class="text-option" onclick="cambiarTamaño('30px')">XL</div>
+        <!-- Aquí he hecho más visibles las opciones de tamaño con texto que describe el tamaño -->
+        <div class="text-option" onclick="cambiarTamaño('12px')">XS (12px)</div>
+        <div class="text-option" onclick="cambiarTamaño('16px')">S (16px)</div>
+        <div class="text-option" onclick="cambiarTamaño('20px')">M (20px)</div>
+        <div class="text-option" onclick="cambiarTamaño('24px')">L (24px)</div>
+        <div class="text-option" onclick="cambiarTamaño('30px')">XL (30px)</div>
     </div>
-
 
     <div class="option-group">
         <label>Font Style</label>
@@ -76,6 +69,42 @@
 </div>
 
 <script src="modificarCosas.js"></script> 
+
+<script>
+// Función para alternar la visibilidad del menú
+function toggleMenu() {
+    let menu = document.getElementById("menu");
+    let button = document.querySelector(".modificarCosas");
+
+    // Verifica el estado actual del menú y alterna entre mostrar u ocultar
+    if (menu.style.display === "none" || menu.style.display === "") {
+        // Muestra el menú y ajusta su posición debajo del botón
+        let rect = button.getBoundingClientRect();
+        menu.style.top = (rect.bottom + window.scrollY) + "px";  // Ajusta el menú justo debajo del botón
+        menu.style.left = rect.left + "px";  // Alinea el menú con el botón
+        menu.style.display = "block";  // Muestra el menú
+    } else {
+        menu.style.display = "none";   // Oculta el menú
+    }
+}
+
+// Las funciones que cambian los estilos en el documento
+function cambiarBG(color) {
+    document.body.style.backgroundColor = color;
+}
+
+function cambiarColorTexto(color) {
+    document.body.style.color = color;
+}
+
+function cambiarTamaño(size) {
+    document.body.style.fontSize = size;
+}
+
+function cambiarTipoTexto(font) {
+    document.body.style.fontFamily = font;
+}
+</script>
 
 </body>
 </html>

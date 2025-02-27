@@ -12,16 +12,13 @@
             <li><a href="Personalizer.html">Personalizer</a></li>
             <li><a href="Form.html">Form</a></li>
             <li><a href="Images.html">Images</a></li>
-           
             <li><button id="Mode">Mode</button></li>
         </ul>
     </div>
-    <script src="Cosas.js"></script>
+    <script src="modificarCosas.js"></script>
     <script>
-       
         let fondoNegro = false;
 
-       
         function cambiarBG() {
             if (fondoNegro) {
                 document.body.style.backgroundColor = "white"; 
@@ -31,7 +28,6 @@
             fondoNegro = !fondoNegro;
         }
 
-    
         document.getElementById("Mode").addEventListener("click", cambiarBG);
     </script>
 </nav>    
@@ -59,8 +55,36 @@
             <option value="Francia">France</option>
             <option value="Inglaterra">England</option>
         </select>
+
+        
+        <div id="ciudades"></div>
+
     </form>
 </div>
-</body>
 
+<script>
+    
+    document.getElementById('pais').addEventListener('change', function() {
+        const paisSeleccionado = this.value;
+        const contenedorCiudades = document.getElementById('ciudades');
+
+        
+        contenedorCiudades.innerHTML = '';
+
+        
+        if (paisSeleccionado === 'España') {
+            const selectCiudades = document.createElement('select');
+            selectCiudades.id = 'ciudad';
+
+            const optionPamplona = document.createElement('option');
+            optionPamplona.value = 'Pamplona';
+            optionPamplona.textContent = 'Pamplona';
+            selectCiudades.appendChild(optionPamplona);
+
+            contenedorCiudades.appendChild(selectCiudades);
+        }
+    });
+</script>
+
+</body>
 </html>
