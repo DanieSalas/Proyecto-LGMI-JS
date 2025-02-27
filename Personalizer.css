@@ -33,7 +33,7 @@ nav {
 
 nav ul {
     display: flex;
-    align-items: center; /* Alinea verticalmente */
+    align-items: center; 
 }
 
 nav li {
@@ -50,16 +50,16 @@ nav a{
 }
 
 .modificarCosas {
-    background: none !important; /* Elimina cualquier fondo forzado */
+    background: none !important;
     border: none;
     outline: none;
     cursor: pointer;
-    color: white; /* Asegura que el color del texto sea el mismo */
+    color: white; 
     font-weight: bold;
-    font-size: inherit; /* Asegura que el tamaño de letra sea el mismo */
-    text-decoration: none; /* Quita el subrayado */
+    font-size: inherit; 
+    text-decoration: none; 
     padding: 0;
     margin: 0;
-    display: inline; /* Evita que el botón se comporte como bloque */
+    display: inline; 
 }
 

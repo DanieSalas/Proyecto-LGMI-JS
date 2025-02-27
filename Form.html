@@ -27,7 +27,27 @@
 </nav>    
     </header>
 
-
+<body>
+<div class="formaCaja">
+    <form style="border: 10px;">
+        <label for="nombre"><h3>Full Name:</h3></label><br>
+        <input type="text" id="nombre" name="nombre" value="Enter your full name" ><br><br>
+        <label for="email"><h3>Email:</h3></label><br>
+        <input form="email" id="email" name="email" value="Enter your email:"><br><br>
+        <button class="validar" onclick="validarEmail()">Validate</button>
+        <label for="genero"><h3>Gender:</h3></label><br>
+        <input type="radio" name="genero" value="hombre" checked>Male
+        <input type="radio" name="genero" value="mujer">Female
+        <input type="radio" name="genero" value="otro">Other<br><br>
+         <label for="pais"><h3>Country:</h3></label><br>
+         <select id="pais">
+            <option value="España">Spain</option>
+            <option value="Francia">France</option>
+            <option value="Inglaterra">England</option>
+         </select>
+    </form>
+</div>
+</body>
 
 
 
