@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head class="header">
-
         <title>Menú Personalización</title>
         <link rel="stylesheet" href="Form.css">
-        
     </head>
-        
 
 <header>
 <nav>
@@ -15,40 +12,55 @@
             <li><a href="Personalizer.html">Personalizer</a></li>
             <li><a href="Form.html">Form</a></li>
             <li><a href="Images.html">Images</a></li>
+           
             <li><button id="Mode">Mode</button></li>
         </ul>
     </div>
     <script src="Cosas.js"></script>
     <script>
-        document.getElementById("Mode").addEventListener("click", function() {
-            document.body.style.backgroundColor = "black";
-        });
+       
+        let fondoNegro = false;
+
+       
+        function cambiarBG() {
+            if (fondoNegro) {
+                document.body.style.backgroundColor = "white"; 
+            } else {
+                document.body.style.backgroundColor = "black";
+            }
+            fondoNegro = !fondoNegro;
+        }
+
+    
+        document.getElementById("Mode").addEventListener("click", cambiarBG);
     </script>
 </nav>    
-    </header>
+</header>
 
 <body>
 <div class="formaCaja">
     <form style="border: 10px;">
         <label for="nombre"><h3>Full Name:</h3></label><br>
         <input type="text" id="nombre" name="nombre" value="Enter your full name" ><br><br>
+        
         <label for="email"><h3>Email:</h3></label><br>
-        <input form="email" id="email" name="email" value="Enter your email:"><br><br>
-        <button class="validar" onclick="validarEmail()">Validate</button>
+        <input type="email" id="email" name="email" value="Enter your email:"><br><br>
+        
+        <button type="button" class="validar" onclick="validarEmail()">Validate</button>
+        
         <label for="genero"><h3>Gender:</h3></label><br>
         <input type="radio" name="genero" value="hombre" checked>Male
         <input type="radio" name="genero" value="mujer">Female
         <input type="radio" name="genero" value="otro">Other<br><br>
-         <label for="pais"><h3>Country:</h3></label><br>
-         <select id="pais">
+        
+        <label for="pais"><h3>Country:</h3></label><br>
+        <select id="pais">
             <option value="España">Spain</option>
             <option value="Francia">France</option>
             <option value="Inglaterra">England</option>
-         </select>
+        </select>
     </form>
 </div>
 </body>
-
-
 
 </html>

@@ -1,48 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head class="header">
-
-<title>Menú Personalización</title>
-<link rel="stylesheet" href="Images.css">
-
+    <title>Menú Personalización</title>
+    <link rel="stylesheet" href="Images.css">
 </head>
 
-
 <header>
-<nav>
-    <div class="menu">
-        <ul>
-            <li><a href="Personalizer.html">Personalizer</a></li>
-            <li><a href="Form.html">Form</a></li>
-            <li><a href="Images.html">Images</a></li>
-            <li><button id="Mode">Mode</button></li>
-        </ul>
-    </div>
-    <script src="Cosas.js"></script>
-    <script>
-        document.getElementById("Mode").addEventListener("click", function() {
-            document.body.style.backgroundColor = "black";
-        });
-    </script>
+    <nav>
+        <div class="menu">
+            <ul>
+                <li><a href="Personalizer.html">Personalizer</a></li>
+                <li><a href="Form.html">Form</a></li>
+                <li><a href="Images.html">Images</a></li>
+                <!-- Botón para cambiar el fondo -->
+                <li><button id="Mode">Mode</button></li>
+            </ul>
+        </div>
+    </nav>
+</header>
 
-</nav>
-    </header>
 <body>
     <div class="zona1">
         <h1>Magic Button: Create & Change Image</h1>
         <button id="cambiarImagen">Change Image!</button>
-
-
     </div>
 
-
-
+    <script src="modificarCosas.js"></script>
+    <script>
+        // Llamamos a la función para alternar el fondo al hacer clic en el botón
+        document.getElementById("Mode").addEventListener("click", function() {
+            cambiarBG();
+        });
+    </script>
 </body>
-
-
-
-
-
-
 
 </html>

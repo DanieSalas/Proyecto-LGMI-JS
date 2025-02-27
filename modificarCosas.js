@@ -1,12 +1,16 @@
-function toggleMenu() {
-    let menu = document.getElementById("menu");
-    menu.style.display = menu.style.display === "block" ? "none" : "block";
+let fondoNegro = false;  // Variable para seguir el estado del fondo
+
+// Función para cambiar entre fondo blanco y negro
+function cambiarBG() {
+    if (fondoNegro) {
+        document.body.style.backgroundColor = "white"; // Cambia el fondo a blanco
+    } else {
+        document.body.style.backgroundColor = "black"; // Cambia el fondo a negro
+    }
+    fondoNegro = !fondoNegro; // Alterna el estado para la próxima vez
 }
 
-function cambiarBG(color) {
-    document.body.style.background = color;
-}
-
+// Aquí tienes las otras funciones que ya tienes en tu código
 function cambiarColorTexto(color) {
     document.body.style.color = color;
 }
