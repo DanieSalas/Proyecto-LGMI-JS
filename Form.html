@@ -41,7 +41,7 @@
         
         <label for="email"><h3>Email:</h3></label><br>
         <input type="email" id="email" name="email" value="Enter your email:"><br><br>
-        
+    
         <button type="button" class="validar" onclick="validarEmail()">Validate</button>
         
         <label for="genero"><h3>Gender:</h3></label><br>
@@ -84,6 +84,33 @@
             contenedorCiudades.appendChild(selectCiudades);
         }
     });
+</script>
+<script>
+    function validarEmail() {
+    
+        const email = document.getElementById('email').value;
+
+
+        if (email.length < 4) {
+            alert("El email es muy corto.");
+            return false;
+        }
+
+        const atIndex = email.indexOf('@');
+        if (atIndex === -1) {
+            alert("El email debe contener un '@'.");
+            return false;
+        }
+
+        const dominio = email.slice(atIndex + 1);
+        if (dominio.length < 2) {
+            alert("El dominio es incorrecto.");
+            return false;
+        }
+
+        alert("El email es correcto.");
+        return true;
+    }
 </script>
 
 </body>
