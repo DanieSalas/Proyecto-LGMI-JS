@@ -53,6 +53,7 @@ button {
     outline: none; 
     background: none; 
     color: #ffffff;
+    font-weight: bold;
   }
   
   .zona1{border: black ;border-radius: 10px;}

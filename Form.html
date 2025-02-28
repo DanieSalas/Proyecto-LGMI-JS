@@ -15,20 +15,12 @@
             <li><button id="Mode">Mode</button></li>
         </ul>
     </div>
+    
     <script src="modificarCosas.js"></script>
     <script>
-        let fondoNegro = false;
-
-        function cambiarBG() {
-            if (fondoNegro) {
-                document.body.style.backgroundColor = "white"; 
-            } else {
-                document.body.style.backgroundColor = "black";
-            }
-            fondoNegro = !fondoNegro;
-        }
-
-        document.getElementById("Mode").addEventListener("click", cambiarBG);
+        document.getElementById("Mode").addEventListener("click", function() {
+            cambiarBG();
+        });
     </script>
 </nav>    
 </header>
@@ -57,8 +49,8 @@
         </select>
 
         
-        <div id="ciudades"></div>
-
+        <div id="ciudades"></div><br>
+        <button onclick="window.location.href='Personalizer.html'" style="width: 80%;">Submit</button>
     </form>
 </div>
 
