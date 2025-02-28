@@ -3,6 +3,37 @@
 <head class="header">
     <title>Menú Personalización</title>
     <link rel="stylesheet" href="Images.css">
+    <style>
+        .zona1, .zona2 {
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: left;
+            width: 80%;
+        }
+        img {
+            width: 100px;
+            height: 100px;
+        }
+        .button-container {
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid #000;
+            border-radius: 15px;
+            background-color: #f0f0f0;
+        }
+        #cambiarImagen {
+            color: black;
+            background: none;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h1{
+            color: rgb(6, 125, 165);
+        }
+    </style>
 </head>
 
 <header>
@@ -21,15 +52,36 @@
 <body>
     <div class="zona1">
         <h1>Magic Button: Create & Change Image</h1>
-        <button id="cambiarImagen">Change Image!</button>
+        <div class="button-container">
+            <button id="cambiarImagen">Change Image!</button>
+        </div>
+        <br><br>
+        <img id="imagenDinamica" src="image1.png" alt="Dynamic Image">
     </div>
 
+    <div class="zona2">
+        <h1>AutoLoading</h1>
+        <img id="imagenAuto" src="img/css.png" alt="Auto Image">
+    </div>
+    
     <script src="modificarCosas.js"></script>
     <script>
         document.getElementById("Mode").addEventListener("click", function() {
             cambiarBG();
         });
+
+        let imagenes = ["img/css.png", "img/html.png", "img/JS.png", "img/navarra.jpg"];
+        let indice = 0;
+
+        document.getElementById("cambiarImagen").addEventListener("click", function() {
+            indice = (indice + 1) % imagenes.length;
+            document.getElementById("imagenDinamica").src = imagenes[indice];
+        });
+
+        setInterval(() => {
+            indice = (indice + 1) % imagenes.length;
+            document.getElementById("imagenAuto").src = imagenes[indice];
+        }, 1000);
     </script>
 </body>
-
 </html>
