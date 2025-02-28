@@ -27,11 +27,11 @@
 <br>    
 <p>Click to Personalizer banner.</p>
 
-
+<!-- El menú ahora tiene el estilo oculto por defecto -->
 <div class="modificarCosas" id="menu" style="display: none; border: 2px solid #ccc; padding: 10px; margin-top: 10px; position: absolute; background-color: #f5f5f5; color: black;">
 
     <div class="option-group">
-        <label>Background Color</label>
+        <label>Bg_color</label>
         <div class="option" style="background: lightcoral;" onclick="cambiarBG('lightcoral')"></div>
         <div class="option" style="background: lightgreen;" onclick="cambiarBG('lightgreen')"></div>
         <div class="option" style="background: lightblue;" onclick="cambiarBG('lightblue')"></div>
@@ -40,7 +40,7 @@
     </div>
 
     <div class="option-group">
-        <label>Text Color</label>
+        <label>Change_letters</label>
         <div class="option" style="background: red;" onclick="cambiarColorTexto('red')"></div>
         <div class="option" style="background: green;" onclick="cambiarColorTexto('green')"></div>
         <div class="option" style="background: blue;" onclick="cambiarColorTexto('blue')"></div>
@@ -49,22 +49,21 @@
     </div>
 
     <div class="option-group">
-        <label>Text Size</label>
-       
-        <div class="text-option" onclick="cambiarTamaño('12px')">XS (12px)</div>
-        <div class="text-option" onclick="cambiarTamaño('16px')">S (16px)</div>
-        <div class="text-option" onclick="cambiarTamaño('20px')">M (20px)</div>
-        <div class="text-option" onclick="cambiarTamaño('24px')">L (24px)</div>
-        <div class="text-option" onclick="cambiarTamaño('30px')">XL (30px)</div>
+        
+        <div class="text-option" onclick="cambiarTamaño('12px')">XS</div>
+        <div class="text-option" onclick="cambiarTamaño('16px')">S</div>
+        <div class="text-option" onclick="cambiarTamaño('20px')">M</div>
+        <div class="text-option" onclick="cambiarTamaño('24px')">L</div>
+        <div class="text-option" onclick="cambiarTamaño('30px')">XL</div>
     </div>
 
     <div class="option-group">
-        <label>Font Style</label>
-        <div class="text-option" onclick="cambiarTipoTexto('Arial')">Arial</div>
-        <div class="text-option" onclick="cambiarTipoTexto('Times New Roman')">Times</div>
-        <div class="text-option" onclick="cambiarTipoTexto('Courier New')">Courier</div>
-        <div class="text-option" onclick="cambiarTipoTexto('Verdana')">Verdana</div>
-        <div class="text-option" onclick="cambiarTipoTexto('Fantasy')">Fantasy</div>
+        
+        <div class="text-option" onclick="cambiarTipoTexto('Arial')">A</div>
+        <div class="text-option" onclick="cambiarTipoTexto('Times New Roman')">T</div>
+        <div class="text-option" onclick="cambiarTipoTexto('Courier New')">C</div>
+        <div class="text-option" onclick="cambiarTipoTexto('Verdana')">F</div>
+        <div class="text-option" onclick="cambiarTipoTexto('Fantasy')">M</div>
     </div>
 </div>
 
@@ -76,17 +75,18 @@ function toggleMenu() {
     let menu = document.getElementById("menu");
     let button = document.querySelector(".modificarCosas");
 
-   
+    
     if (menu.style.display === "none" || menu.style.display === "") {
-       
         let rect = button.getBoundingClientRect();
+        
         menu.style.top = (rect.bottom + window.scrollY) + "px";
         menu.style.left = rect.left + "px"; 
         menu.style.display = "block"; 
-        menu.style.display = "none";  
+    } else {
+        
+        menu.style.display = "none";
     }
 }
-
 
 function cambiarBG(color) {
     document.body.style.backgroundColor = color;
@@ -103,6 +103,7 @@ function cambiarTamaño(size) {
 function cambiarTipoTexto(font) {
     document.body.style.fontFamily = font;
 }
+
 </script>
 
 </body>
